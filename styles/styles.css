@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* Define standard variables and values for website : underscore and hyphen are same $x-y & $x_y are one variable names*/
+/* Use the variables */
+body {
+  background-color: skyblue;
+  color: red;
+  font-size: 22px;
+}
+
+.header {
+  background-color: green;
+}
+
+.footer {
+  background-color: blue;
+}
+
+.main {
+  background-color: brown;
+}
+
+h1 {
+  background-color: teal;
+}
+
+p {
+  background-color: teal;
+}
+
+.icon-40px {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.icon-50px {
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+.icon-80x {
+  font-size: 80x;
+  height: 80x;
+  width: 80x;
+}
+
+.icon-eye:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+}
+
+.icon-start:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+}
+
+.icon-stop:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+}
+
+.icon-eyes:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+  font-size: 12px;
+}
+
+.icon-starts:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+  font-size: 16px;
+}
+
+.icon-stops:before {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "";
+  font-size: 10px;
+}
+
+ul:nth-child(3n+0) {
+  background-color: green;
+}
+
+ul:nth-child(3n+1) {
+  background-color: #009a00;
+}
+
+ul:nth-child(3n+2) {
+  background-color: #00b300;
+}
+
+.icon-1 {
+  background-color: red;
+}
+
+.icon-2 {
+  background-color: red;
+}
+
+.class1 {
+  padding: 10px;
+}
+
+h2 {
+  background-color: blue;
+}
+
+ul li {
+  background-color: blue;
+  list-style-type: none;
+  color: white;
+  font-size: 12px;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+}
+
+ul li a {
+  background-color: green;
+  padding: 5px;
+}
+/*# sourceMappingURL=styles.css.map */

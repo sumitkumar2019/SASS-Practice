@@ -1,0 +1,108 @@
+@import "global";
+
+
+/* Use the variables */
+body{
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+}
+.header{
+    background-color: $primary_color_1;
+}
+.footer{
+    background-color: $primary_color_2;
+}
+.main{
+    background-color: $primary_color_3;
+}
+h1{
+    $bgcolor: teal !global;
+    background-color: $bgcolor;
+}
+
+@if $bgcolor == teal {
+    p{
+        background-color: $bgcolor;
+    }
+}@else if $bgcolor == blue{
+    p{
+        background-color: $bgcolor;
+    }
+}@else{
+    @error "Unknown color #{$bgcolor}.";
+}
+//with list
+@each $size in $sizes {
+    .icon-#{$size}{
+        font-size: $size;
+        height: $size;
+        width: $size;
+    }
+}
+//with map
+@each $name, $glyph in $icons {
+    .icon-#{$name}:before{
+        display: inline-block;
+        font-family: "Icon Font";
+        content: $glyph;
+    }
+}
+//destructuring
+@each $name, $glyph, $size in $icons-des {
+    .icon-#{$name}:before {
+        display: inline-block;
+        font-family: "Icon Font";
+        content: $glyph;
+        font-size: $size;
+      }
+}
+@for $i from 0 to 3 {
+    ul:nth-child(3n+#{$i}){
+        background-color: lighten($color:$primary_color_1, $amount: $i*5%);
+    }
+}
+@function padding($px){
+    @while $px>30 {
+        $px:$px+1;
+    }
+    @return $px;
+}
+$x:1;
+@while $x<3 {
+    
+    .icon-#{$x}{
+        background-color: red;
+    }
+    $x:$x+1;
+}
+.class1{
+    padding: padding(10px);
+}
+h2{
+    $bgcolor: blue;
+    @debug $bgcolor;
+    background-color: $bgcolor;
+}
+
+//Sass Nested Rules
+ul{
+    li{
+        background-color: $primary_color_2;
+        list-style-type: none;
+        color: white;
+        font: {
+            size: 12px;
+            family: arial;
+            weight: bold;
+        };
+        text:{
+            align:center;
+        };
+        a{
+            background-color: $primary_color_1;
+            padding: 5px;
+        }
+    }
+}
+
